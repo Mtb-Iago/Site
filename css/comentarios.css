@@ -11,7 +11,7 @@ body {
 div#Largura-pagina {
     width: 85%;
     /* o conteudo fica ate 85% da pagina*/
-    background-color: red;
+    background-color: rgb(32, 129, 13);
     margin: auto;
     /*centraliza automatico*/
 }
@@ -20,7 +20,7 @@ div#Largura-pagina {
 /*---------------------menu--------------------*/
 
 nav {
-    background-color: rgba(123, 104, 238);
+    background-color: rgb(11, 216, 182);
     /*cria uma tabela azul de 60px na parte superior*/
     height: 60px;
 }
@@ -90,4 +90,20 @@ section#conteudo1 {
 img {
     width: 100%;
     /*a imagem ocupa toda sessao*/
+}
+
+
+/*--------------FORMULARIO-----------*/
+
+form img {
+    width: 50px;
+}
+
+textarea {
+    height: 100px;
+    width: 85%;
+    border: none;
+    padding: 7px;
+    font-size: 14pt;
+    margin: 9px;
 }
