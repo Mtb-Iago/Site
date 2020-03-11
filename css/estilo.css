@@ -1,0 +1,53 @@
+* {
+    /*tag padrão*/
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial
+}
+
+h3 {
+    font-size: 40pt;
+    padding: 70px;
+}
+
+
+/*---------------------menu--------------------*/
+
+nav {
+    background-color: rgba(123, 104, 238);
+    /*cria uma tabela azul de 60px na parte superior*/
+    height: 60px;
+}
+
+ul {
+    list-style: none;
+    /*background-color: red;*/
+    float: right;
+    /*coloca vermelho na barra ul e joga para canto direito*/
+    margin-right: 100px;
+    /*afasta um pouco do final da tela*/
+}
+
+li {
+    display: inline-block;
+    /*para ficar um do lado do outro*/
+    line-height: 60px;
+    /*coloca o li do tamanho do nav*/
+    padding: 0px 10px;
+    /*nao muda a posição de cima ou baixo, muda espaçamento de letras*/
+}
+
+li a {
+    text-decoration: none;
+    /*tira o sublinhado do link*/
+    color: white;
+}
+
+li a:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    /*sublinha o link quando passa o mouse*/
+}

@@ -1,0 +1,93 @@
+* {
+    /*tag padrão*/
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial
+}
+
+div#Largura-pagina {
+    width: 85%;
+    /* o conteudo fica ate 85% da pagina*/
+    background-color: red;
+    margin: auto;
+    /*centraliza automatico*/
+}
+
+
+/*---------------------menu--------------------*/
+
+nav {
+    background-color: rgba(123, 104, 238);
+    /*cria uma tabela azul de 60px na parte superior*/
+    height: 60px;
+}
+
+ul {
+    list-style: none;
+    /*background-color: red;*/
+    float: right;
+    /*coloca vermelho na barra ul e joga para canto direito*/
+    margin-right: 100px;
+    /*afasta um pouco do final da tela*/
+}
+
+li {
+    display: inline-block;
+    /*para ficar um do lado do outro*/
+    line-height: 60px;
+    /*coloca o li do tamanho do nav*/
+    padding: 0px 10px;
+    /*nao muda a posição de cima ou baixo, muda espaçamento de letras*/
+}
+
+li a {
+    text-decoration: none;
+    /*tira o sublinhado do link*/
+    color: white;
+}
+
+li a:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    /*sublinha o link quando passa o mouse*/
+}
+
+
+/* Titulo da pagina */
+
+h1 {
+    padding: 70px 0px 25px 0px;
+    font-size: 27pt;
+    line-height: 40pt;
+    /*espaço entre as palavras*/
+}
+
+
+/*------------texto-------------------*/
+
+p.texto {
+    /* .  e nao # pq é uma classe e pode ser usada quando querer*/
+    font-size: 15pt;
+    line-height: 40px;
+    color: rgba(0, 0, 0, .8);
+    margin: 20px 0px;
+    /*espaçamento entre os paragrafos*/
+    font-family: 'Microsoft YaHei Ligth';
+}
+
+
+/*-----------conteudo pagina-----------*/
+
+section#conteudo1 {
+    width: 60%;
+    background-color: turquoise;
+    /*a sessao fica a 60% da pagina*/
+}
+
+img {
+    width: 100%;
+    /*a imagem ocupa toda sessao*/
+}
