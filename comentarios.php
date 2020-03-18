@@ -11,7 +11,7 @@
     <!----direcionamento pelo url----->
         <ul>
             <li> <a href="index.php">Inicio</a></li>
-            <li> <a href="">Entrar</a></li>             
+            <li> <a href="entrar.php">Entrar</a></li>             
         </ul>
     </nav>
     <div id="Largura-pagina">

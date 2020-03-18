@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html5>
 <html lang="pt-br">
     <head>
         <title>Deixe seu comentario..</title>
@@ -12,29 +12,34 @@
     <!----direcionamento pelo url----->
         <ul>
             <li> <a href="comentarios.php">Comentarios</a></li>
-            <li> <a href="">Entrar</a></li>             
+            <li> <a href="entrar.php">Entrar</a></li>             
         </ul>
     </nav>
     <h3>CONTEUDO QUALQUER!!!!</h3>
    <!-----------------Sessao de calculo----------------->
     <section>
          <div class="centro">
-        primeira nota:
-        <input class="nota1" type="text"><br><!--a diferença entre type text/~type number e que em number pode obter numeradores--->
-        segunda nota:
-        <input class="nota2" type="number"><br>
-        terceira nota:
-        <input class="nota3" type="number"><br>
-        <button onclick="clicar()">Resultado</button>
+         <h2>Calcular média</h2>   
+       
+        <p> Primeira nota:</p>
+        <input class="nota1" type="text"placeholder="nota da 1ºunidade"><!--a diferença entre type text/~type number e que em number pode obter numeradores--->
+        <p>Segunda nota:</p>
+        <input class="nota2" type="text"placeholder="nota da 2ºunidade">
+        <p>Terceira nota:</p>
+        <input class="nota3" type="text" placeholder="nota da 3ºunidade">
+        
+        <button class="botao" onclick="clicar()">Resultado</button>
         <!-----botao receber o calculo da função clicar() do js------>
+        <div id="in">
+            
         
-        <p class="resultado"></p><br>
+        <p class="resultado"></p>
         <!----classe resultado imprime o resultado obtido em js------>
-        <p class="msg"></p>
+        <p class="msg"></p></p>
         <p class="resultadofinal"></p>
-        <p class="resultadofinal1"></p>
         <p class="ni"></p>
-        
+        </div>
+        </div>
          </div>
     </section>
     </body>

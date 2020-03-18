@@ -5,7 +5,21 @@
 }
 
 body {
-    font-family: Arial
+    padding-top: 100px;
+    font-family: Arial;
+    background-image: url("../img/fundoentrar.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*fixa no meio a img*/
+    background-size: cover;
+    background-color: #464646;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 h3 {
@@ -17,7 +31,7 @@ h3 {
 /*---------------------menu--------------------*/
 
 nav {
-    background-color: rgba(123, 104, 238);
+    background-color: #82909b;
     /*cria uma tabela azul de 60px na parte superior*/
     height: 60px;
 }
@@ -50,4 +64,114 @@ li a:hover {
     border-bottom: 1px solid white;
     padding-bottom: 5px;
     /*sublinha o link quando passa o mouse*/
+}
+
+
+/*------------------calculo---------------------*/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #fff;
+}
+
+ :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+}
+
+ ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #fff;
+}
+
+div.centro {
+    background-color: rgba(121, 121, 121, 0.8);
+    border: 8px solid #3f4244;
+    border-style: solid;
+    width: 30%;
+    display: block;
+    margin: auto;
+    padding: 2px 20px;
+    text-align: center;
+    line-height: 40pt;
+}
+
+div.centro h2 {
+    font-family: 'Microsoft YaHei Light';
+    background-color: #0066b8;
+    line-height: 70px;
+    color: aliceblue;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.botao {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    width: 200px;
+    height: 35px;
+    background-color: #0066b8;
+    text-align: center;
+    padding: 9px 50px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: rgb(11, 216, 182);
+    color: white;
+    clear: both;
+}
+
+.centro h2 {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.centro p {
+    display: inline;
+    color: aliceblue;
+    clear: both;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.resultado {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34);
+    clear: both;
+}
+
+p.msg {
+    outline: none;
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34);
+    clear: both;
+}
+
+p.resultadofinal {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(50, 205, 50, .3);
+    border: 1px solid rgb(34, 139, 34);
+}
+
+p.ni {
+    width: 400px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(250, 128, 114, .3);
+    border: 1px solid rgb(165, 42, 42);
 }

@@ -1,0 +1,156 @@
+* {
+    /*tag padrão*/
+    padding: 0px;
+    margin: 0px;
+}
+
+nav {
+    position: fixed;
+    /*Coloca o nav, no topo da tela*/
+    top: 0;
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(83, 83, 83, 0.9);
+    /*cria uma tabela azul de 60px na parte superior*/
+    height: 60px;
+}
+
+ul {
+    list-style: none;
+    /*background-color: red;*/
+    float: right;
+    /*coloca vermelho na barra ul e joga para canto direito*/
+    margin-right: 100px;
+    /*afasta um pouco do final da tela*/
+}
+
+li {
+    display: inline-block;
+    /*para ficar um do lado do outro*/
+    line-height: 60px;
+    /*coloca o li do tamanho do nav*/
+    padding: 0px 10px;
+    /*nao muda a posição de cima ou baixo, muda espaçamento de letras*/
+}
+
+li a {
+    text-decoration: none;
+    /*tira o sublinhado do link*/
+    color: white;
+}
+
+li a:hover {
+    text-decoration: underline;
+}
+
+body {
+    padding-top: 100px;
+    font-family: Arial;
+    background-image: url("../img/fundoentrar.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*fixa no meio a img*/
+    background-size: cover;
+    background-color: #464646;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    width: 350px;
+    border-radius: 8px;
+    margin: 10px auto;
+    background-color: rgba(211, 13, 13, .9);
+    background-attachment: scroll;
+    padding: 25px;
+    box-shadow: 1px 1px 10px rgba(255, 253, 253, 0.4);
+}
+
+img {
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+input {
+    border-radius: 8px;
+    display: block;
+    float: left;
+    width: 87%;
+    height: 30px;
+    font-size: 11pt;
+    color: rgba(0, 0, 0, .7);
+    padding: 5px;
+    margin-bottom: 15px;
+    /*separa os button*/
+    outline: none;
+}
+
+h1 {
+    clear: both;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px;
+    width: 170px;
+    border-radius: 8px;
+    display: block;
+    font-weight: normal;
+    /*tira o negrito*/
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+}
+
+input[type=submit] {
+    width: 100px;
+    border-radius: 8px;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(123, 104, 238);
+    color: white;
+    border: none;
+    float: right;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .4);
+}
+
+input[type=submit]:hover {
+    text-decoration: underline;
+    text-decoration-color: tomato;
+    color: black;
+    background-color: yellowgreen;
+}
+
+a {
+    width: 40%;
+    display: block;
+    text-align: left;
+    clear: both;
+    /*retira o float herdado do botao de cima*/
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+span {
+    border-radius: 8px;
+    width: 350px;
+    margin: 20px auto;
+    padding: 25px;
+    box-shadow: 1px 1px 10px rgba(245, 244, 244, 0.4);
+    background-color: rgba(0, 0, 0, .9);
+    text-align: center;
+    display: block;
+    color: white;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 3px gray;
+}

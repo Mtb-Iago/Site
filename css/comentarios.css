@@ -221,4 +221,8 @@ section#conteudo3 h5 {
     font-family: 'Microsoft YaHei Ligth';
     font-size: 16pt;
     text-align: center;
+    font-family: 'Microsoft YaHei Ligth';
+    color: rgba(0, 0, 0, .8);
+    line-height: 20pt;
+    margin: 20px auto;
 }
