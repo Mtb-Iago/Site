@@ -20,7 +20,7 @@ div#Largura-pagina {
 /*---------------------menu--------------------*/
 
 nav {
-    background-color: rgb(11, 216, 182);
+    background-color: rgba(83, 83, 83, 0.9);
     /*cria uma tabela azul de 60px na parte superior*/
     height: 60px;
 }

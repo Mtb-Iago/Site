@@ -9,14 +9,18 @@ function clicar() { //função que envia o calculo do js para o html
     //tag ".resultado" recebe o total da variavel resultado e mostra no html// document.querySelector buscar " "e .innerHTML linka com html
     alert('Sua média: ' + (resultado.toFixed(1)));
 
+    if (resultado >= 7) {
+        alert('Parabéns você foi aprovado..');
+        document.querySelector(".resultado").innerHTML = `Sua média..: ${resultado.toFixed(1)} Parabéns você foi aprovado!`;
+    } else
 
-    var resultadofinal = 15 - resultado * 2;
+        var resultadofinal = 15 - resultado * 2;
     if (resultadofinal <= 10) {
 
         alert('Infelizmente vai precisar fazer prova final..');
         document.querySelector(".resultadofinal").innerHTML = 'Infelizmente vai precisar fazer prova final..';
         alert('E sua nota deve ser => ' + (resultadofinal.toFixed(1)));
-        document.querySelector(".resultadofinal1").innerHTML = `Sua nota deve ser..: ${resultadofinal.toFixed(1)}`;
+        document.querySelector(".resultadofinal1").innerHTML = `Sua nota deve ser..: >= ${resultadofinal.toFixed(1)}`;
     } else if (resultadofinal > 10) {
         alert('Nota insuficiente para fazer prova final..:');
         document.querySelector(".ni").innerHTML = 'Nota insuficiente para fazer prova final..:';

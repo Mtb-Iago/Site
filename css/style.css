@@ -7,7 +7,7 @@
 body {
     padding-top: 100px;
     font-family: Arial;
-    background-image: url("../img/fundoentrar.jpg");
+    background-image: url("../img/fundoindex.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     /*fixa no meio a img*/
@@ -31,7 +31,14 @@ h3 {
 /*---------------------menu--------------------*/
 
 nav {
+    position: absolute;
+    /*Coloca o nav, no topo da tela*/
+    top: 0;
     background-color: #82909b;
+    /*cria uma tabela azul de 60px na parte superior*/
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(83, 83, 83, 0.9);
     /*cria uma tabela azul de 60px na parte superior*/
     height: 60px;
 }
@@ -69,27 +76,9 @@ li a:hover {
 
 /*------------------calculo---------------------*/
 
-::-webkit-input-placeholder {
-    /* WebKit browsers */
-    color: #fff;
-}
-
- :-moz-placeholder {
-    /* Mozilla Firefox 4 to 18 */
-    color: #fff;
-}
-
- ::-moz-placeholder {
-    /* Mozilla Firefox 19+ */
-    color: #fff;
-}
-
- :-ms-input-placeholder {
-    /* Internet Explorer 10+ */
-    color: #fff;
-}
-
-div.centro {
+#conteiner {
+    position: relative;
+    top: auto;
     background-color: rgba(121, 121, 121, 0.8);
     border: 8px solid #3f4244;
     border-style: solid;
@@ -98,26 +87,27 @@ div.centro {
     margin: auto;
     padding: 2px 20px;
     text-align: center;
-    line-height: 40pt;
+    line-height: 35pt;
 }
 
-div.centro h2 {
+#h2 {
     font-family: 'Microsoft YaHei Light';
-    background-color: #0066b8;
-    line-height: 70px;
+    background-color: rgba(83, 83, 83, 0.9);
+    line-height: 30px;
     color: aliceblue;
     padding: 10px;
     margin-bottom: 5px;
 }
 
 .botao {
+    position: static;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
-    width: 200px;
+    width: 80%;
     height: 35px;
     background-color: #0066b8;
     text-align: center;
-    padding: 9px 50px;
+    padding: 9px 10px;
     border: none;
     color: white;
     cursor: pointer;
@@ -129,49 +119,95 @@ div.centro h2 {
     clear: both;
 }
 
-.centro h2 {
+input {
+    border-radius: 8px;
+    display: inline-block;
+    width: 55%;
+    height: 30px;
+    font-size: 11pt;
+    color: rgba(0, 0, 0, .7);
+    padding: 5px;
+    margin-bottom: 10px;
+    /*separa os button*/
+    outline: none;
+}
+
+h2 {
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 1px 1px 10px rgba(245, 244, 244, 0.4);
+    background-color: rgba(0, 0, 0, .9);
+    text-align: center;
+    height: 40px;
+    display: block;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 3px gray;
     color: rgba(255, 255, 255, 0.8)
 }
 
-.centro p {
-    display: inline;
+p {
+    display: inline-block;
     color: aliceblue;
     clear: both;
     font-size: 15px;
     font-family: cursive;
 }
 
-.resultado {
-    width: 400px;
-    margin: 10px auto;
+p.resultado {
+    width: 80%;
     padding: 10px;
-    background-color: rgba(50, 205, 50, .3);
-    border: 1px solid rgb(34, 139, 34);
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px black;
+    color: green;
     clear: both;
 }
 
 p.msg {
-    outline: none;
-    width: 400px;
-    margin: 10px auto;
+    width: 80%;
     padding: 10px;
-    background-color: rgba(50, 205, 50, .3);
-    border: 1px solid rgb(34, 139, 34);
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px black;
+    color: orangered;
     clear: both;
 }
 
 p.resultadofinal {
-    width: 400px;
-    margin: 10px auto;
+    width: 80%;
     padding: 10px;
-    background-color: rgba(50, 205, 50, .3);
-    border: 1px solid rgb(34, 139, 34);
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    color: orangered;
+    clear: both;
+}
+
+p.resultadofinal1 {
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    color: orangered;
+    clear: both;
 }
 
 p.ni {
-    width: 400px;
-    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    font-size: 15pt;
+    color: red;
     padding: 10px;
-    background-color: rgba(250, 128, 114, .3);
-    border: 1px solid rgb(165, 42, 42);
+    clear: both;
 }

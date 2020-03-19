@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title></title>
+        <title>ENTRAR</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/entrar.css" rel="stylesheet">
@@ -24,7 +24,7 @@
             <img src="img\cadeado.png" >
             <input type="password" name="senha" placeholder="Senha">
             <input type="submit" value="Entrar">
-            <a href="cadastro.php">Registre-se agora!</a>
+            <a href="cadastrar.php">Registre-se agora!</a>
         </form>
 
     </body>

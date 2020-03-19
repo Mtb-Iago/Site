@@ -1,0 +1,81 @@
+* {
+    /*tag padrão*/
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*---------------------menu--------------------*/
+
+nav {
+    /*Coloca o nav, no topo da tela*/
+    top: 0;
+    background-color: #82909b;
+    /*cria uma tabela azul de 60px na parte superior*/
+    width: 100%;
+    margin: 0px;
+    background-color: rgba(83, 83, 83, 0.9);
+    /*cria uma tabela azul de 60px na parte superior*/
+    height: 60px;
+}
+
+ul {
+    list-style: none;
+    /*background-color: red;*/
+    float: right;
+    /*coloca vermelho na barra ul e joga para canto direito*/
+    margin-right: 100px;
+    /*afasta um pouco do final da tela*/
+}
+
+li {
+    display: inline-block;
+    /*para ficar um do lado do outro*/
+    line-height: 60px;
+    /*coloca o li do tamanho do nav*/
+    padding: 0px 10px;
+    /*nao muda a posição de cima ou baixo, muda espaçamento de letras*/
+}
+
+li a {
+    text-decoration: none;
+    /*tira o sublinhado do link*/
+    color: white;
+}
+
+li a:hover {
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    /*sublinha o link quando passa o mouse*/
+}
+
+
+/*---------------------------tabela-----------------------*/
+
+table {
+    width: 80%;
+    /*largura*/
+    background-color: rgba(83, 83, 83, 0.9);
+    margin: 80px auto;
+    border-collapse: collapse;
+}
+
+tr#titulo {
+    background-color: rgba(0, 0, 0, .8);
+    color: 8;
+    text-align: center;
+}
+
+td {
+    border: 1px solid white;
+}
+
+tr {
+    height: 50px;
+    text-align: center;
+    color: white;
+}
