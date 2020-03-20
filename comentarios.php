@@ -29,7 +29,7 @@
         <form method="POST">
         
         <img src="img\perfil.png">
-        <textarea name="Texto"  placeholder="Participe da discussão"></textarea> <!---placeholder texto que apaga quando se clica no botao---->
+        <textarea name="Texto"  placeholder="Participe da discussão" maxlength="400"></textarea> <!---placeholder texto que apaga quando se clica no botao---->
         <input type="submit" value="PUBLICAR COMENTARIO"> <!--value e o nome que fica no botao-->
         </form>
        

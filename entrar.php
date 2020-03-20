@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<html5>
 <html lang="pt-br">
     <head>
         <title>ENTRAR</title>
@@ -20,7 +20,7 @@
         <form method="POST">
             <h1>Acesse a sua conta</h1>
             <img src="img\envelope.png" >
-            <input type="email" name="Email" autocomplete="off" placeholder="Entre com seu email">
+            <input type="email" name="email" autocomplete="off" placeholder="Entre com seu email" maxlength="40">
             <img src="img\cadeado.png" >
             <input type="password" name="senha" placeholder="Senha">
             <input type="submit" value="Entrar">
@@ -29,3 +29,28 @@
 
     </body>
 </html>
+
+<?php
+
+if(isset($_POST['email']))
+{
+	$email = addslashes($_POST['email']);
+	$senha = addslashes($_POST['senha']);
+	if(!empty($email) && !empty($senha))
+	{
+		require_once 'CLASSES/usuarios.php';
+		$us = new Usuario("projeto_comentario","localhost","root","");
+		if($us->logar($email, $senha))
+		{
+			header("location: index.php");
+		}else
+		{
+			echo "Email e/ou senha estão incorretos!";
+		}
+	}else
+	{
+		echo "Preencha todos os campos!";
+	}
+}
+
+?>
