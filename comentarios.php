@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -11,7 +15,22 @@
     <!----direcionamento pelo url----->
         <ul>
             <li> <a href="index.php">Inicio</a></li>
-            <li> <a href="entrar.php">Entrar</a></li>             
+            <?php
+               if (isset($_SESSION['id_master']))
+                { ?>
+                    <li> <a href="dados.php">Dados</a></li>
+               <?php }
+
+                if(isset($_SESSION['id_usuario']) || isset($_SESSION['id_master']))
+                { ?>
+                         <li> <a href="sair.php">Sair</a></li>
+               <?php } 
+               else
+               { ?>
+                <li> <a href="entrar.php">Entrar</a></li>
+              <?php }  
+              ?>     
+                         
         </ul>
     </nav>
     <div id="Largura-pagina">

@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!isset($_SESSION['id_master'])){
+    header("location: index.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>

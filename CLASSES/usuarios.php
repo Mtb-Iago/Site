@@ -46,7 +46,7 @@
         $cmd->bindValue(":s", md5($senha));
         $cmd->execute();
         if ($cmd->rowCount() > 0) {//se foi encontrado id >0 pode logar
-         //$dados = $cmd->fecth();//transforma os parametros do banco de dados em array
+            $dados = $cmd->fetch(PDO::FETCH_ASSOC);//transforma os parametros do banco de dados em array
          session_start();
             if ($dados['id'] == 1) {//verifica se encontrou a pessoa
                //usuario adm
@@ -59,5 +59,14 @@
             return false;// nao encontrou a pessoa
         }
     }
+    public function buscarDados($id)
+    {
+        $cmd = $this->pdo->prepare("SELECT * FROM usuarios WHERE  id  = :id");
+        $cmd->bindValue(":id", $id);
+        $cmd->execute();      
+        $dados = $cmd->fetch();
+        return $dados;
+    }
 
 }
+?>

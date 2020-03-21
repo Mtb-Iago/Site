@@ -62,7 +62,7 @@ if(isset($_POST['nome']))
 			$us = new Usuario("projeto_comentario","localhost","root","");
 			if($us->cadastrar($nome, $email,$telefone, $senha))
 			{ ?>
-				<p class="mensagem">Cadastrado com sucesso!<a href="entrar.php">Acesse já!</a></p> 
+				<p class="mensagem1">Cadastrado com sucesso!<a href="entrar.php">Acesse já!</a></p> 
 <?php		}else
 			{ ?>
 				<p class="mensagem">Email já está cadastrado!</p>

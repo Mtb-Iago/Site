@@ -1,4 +1,27 @@
-<html5>
+<?php
+        require_once 'CLASSES/usuarios.php';
+        session_start();
+        
+        if (isset($_SESSION['id_usuario']))
+        {
+            $us = new Usuario("projeto_comentario","localhost","root","");
+            $informacao = $us->buscarDados($_SESSION['id_usuario']);
+            
+        }  
+        else
+        
+        if (isset($_SESSION['id_master']))
+        {
+            $us = new Usuario("projeto_comentario","localhost","root","");
+            $informacao = $us->buscarDados($_SESSION['id_master']);
+        }
+       
+
+
+
+?>    
+
+<!DOCTYPE html5>
     <html lang="pt-br">
 
     <head>
@@ -13,9 +36,25 @@
 
         <nav>
             <!----direcionamento pelo url----->
-            <ul>
+            <ul> <?php
+                    if(isset($_SESSION['id_master']))
+                    { ?>
+                        <li> <a href="dados.php">Dados</a> </li>
+                        <?php  } 
+                    ?>
+               
                 <li> <a href="comentarios.php">Comentarios</a></li>
-                <li> <a href="entrar.php">Entrar</a></li>
+                
+                    <?php 
+                        if (isset($informacao))//tem uma sessao iniciada
+                        { ?>
+                            <li> <a href="sair.php">Sair</a></li>
+                        <?php }
+                        else
+                        { ?>
+                            <li> <a href="entrar.php">Entrar</a></li>
+                       <?php }
+                    ?>
             </ul>
         </nav>
 
@@ -51,6 +90,22 @@
              </div>
             </div>
         </section>
-    </body>
+    <?php 
+        if (isset($_SESSION['id_master']) || isset($_SESSION['id_usuario']))
+        { ?> 
+        
+            <h2> 
+                <?php echo "Olá ";
+                       echo $informacao['nome'];
+                       echo " , seja bem vindo(a)!"; 
+                        
+                ?>  
 
+            </h2>
+         
+        <?php }  
+    
+    ?>
+    <h3>CONTEÚDO QUALQUER</h3>
+    </body>
     </html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline&display=swap');
 * {
     /*tag padrão*/
     padding: 0px;
@@ -210,4 +211,11 @@ p.ni {
     color: red;
     padding: 10px;
     clear: both;
+}
+
+
+/*--------------------saudações-----------------*/
+
+h2 {
+    font-family: 'Bungee Inline', cursive;
 }
