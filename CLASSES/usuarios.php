@@ -68,5 +68,17 @@
         return $dados;
     }
 
+    public function buscarTodosUsuarios()
+    {
+        $cmd = $this->pdo->prepare("SELECT usuarios.id,usuarios.nome,usuarios.email, usuarios.telefone, COUNT(comentarios.id) as 'quantidade' /*Count conta os comentarios pega comentarios e renomeia para quantidade*/
+        FROM usuarios
+        LEFT JOIN comentarios /*pega todos os dados contendo ou nao comentario*/
+        ON usuarios.id = comentarios.fk_id_usuario /*uniao das 2 tabelas */
+        GROUP BY usuarios.id ");/*agrupa as tabelas e junto com a count ordena para conta a quantidade de comentario*/
+        $cmd->execute();
+        $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
+        return $dados;
+    }
+
 }
 ?>

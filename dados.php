@@ -3,6 +3,9 @@ session_start();
 if(!isset($_SESSION['id_master'])){
     header("location: index.php");
 }
+require_once 'CLASSES/usuarios.php';
+$us = new Usuario("projeto_comentario","localhost","root","");
+$dados = $us->buscarTodosUsuarios();
 
 ?>
 <!DOCTYPE html>
@@ -28,43 +31,29 @@ if(!isset($_SESSION['id_master'])){
                 <td>ID </td>
                 <td>NOME</td>
                 <td>EMAIL</td>
+                <td>TELEFONE</td>
                 <td>COMENTARIOS</td>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>ANA</td>
-                <td>ANA@HOTMAIL.COM</td>
-                <td>1</td>          
+            <?php
+            if (Count($dados)>0) {
+               foreach ($dados as $v ) { ?>
+                <tr>
+                <td> <?php echo $v['id']; ?> </td>
+                <td> <?php echo $v['nome']; ?> </td>
+                <td> <?php echo $v['email']; ?> </td>
+                <td> <?php echo $v['telefone']; ?> </td>
+                <td> <?php echo $v['quantidade'];?></td>          
             
             </tr>
-            <tr>
-                <td>2</td>
-                <td>MARIO</td>
-                <td>MARIO@HOTMAIL.COM</td>
-                <td>1</td>          
+              <?php }
+            }
+            else {
+                echo "Ainda não há usuarios cadastrados!";
+            }
             
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>JOSE</td>
-                <td>JOSE@HOTMAIL.COM</td>
-                <td>1</td>          
+            ?>
             
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>MARIA</td>
-                <td>MARIA@HOTMAIL.COM</td>
-                <td>1</td>          
-            
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>IGOR</td>
-                <td>IGOR@HOTMAIL.COM</td>
-                <td>1</td>          
-            </tr>
-            
+                       
             
             
         </table>

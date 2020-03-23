@@ -3,7 +3,7 @@
     <head>
         <title>ENTRAR</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <link href="css/entrar.css" rel="stylesheet">
     </head>
     <body>
@@ -44,13 +44,13 @@ if(isset($_POST['email']))
 		{
 			header("location: index.php");
 		}else
-		{
-			echo "Email e/ou senha estão incorretos!";
-		}
+		{ ?>
+			<p> "Email e/ou senha estão incorretos!";</p>
+		<?php }
 	}else
-	{
-		echo "Preencha todos os campos!";
-	}
+	{ ?>
+		    <p> "Preencha todos os campos!";</p>
+	<?php }
 }
 
 ?>

@@ -27,7 +27,7 @@
     <head>
         <title>Deixe seu comentario..</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <script src="calculo.js"></script>
         <link href="css/style.css" rel="stylesheet">
     </head>
@@ -81,7 +81,7 @@
 
                     <p class="resultado"></p>
                     <!----classe resultado imprime o resultado obtido em js------>
-                    <p class="msg"></p>                    
+                    <div class="msg"></div>                    
                     <p class="resultadofinal"></p>
                     <p class="resultadofinal1"></p>
                     <p class="ni"></p>
