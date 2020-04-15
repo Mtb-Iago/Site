@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/cadastrar.css" rel="stylesheet">
+        <link rel="icon" type="imagem/png" href="img/icon.png" />
+
     </head>
     <body>
         
@@ -21,19 +23,46 @@
             <h1>CADASTRE-SE</h1>
             <label for="nome">NOME</label>
             <input type="text" autocomplete="off" placeholder="Nome" name="nome" maxlength="40">
+
             <label for="email">EMAIL</label>
             <input type="email"  autocomplete="off" placeholder="Entre com seu email" name="email" maxlength="40">
+            
             <label for="telefone">TELEFONE</label>
             <input type="text" autocomplete="off" placeholder="Contato" name="telefone" maxlength="11">
+            
             <label for="senha">SENHA</label>
-            <input type="password" placeholder="Senha" name="senha">
+                <div class="formsenha">
+            <input type="password" placeholder="Senha" name="senha" id="senha">
+                </div>
+            <button onclick="mostrarSenha()"  type="button" id="senha" ></button>
+           
             <label for="conf">CONFIRMA SENHA</label>
-            <input type="password" placeholder="Confirma Senha" name="confSenha">
+                <div class="formsenha">
+            <input type="password" placeholder="Confirma Senha" name="confSenha" id="confsenha">
+                </div>
+            <button onclick="mostrarSenha1()"  type="button"></button>
             <input type="submit" value="Cadastrar">
             
-
-            
         </form>
+        <script>
+            function mostrarSenha(){
+                let tipo = document.getElementById("senha");
+                if (tipo.type == "password"){
+                    tipo.type = "text";
+                }else{
+                    tipo.type = "password";
+                }
+            }
+            function mostrarSenha1(){
+                let tipo = document.getElementById("confsenha");
+                if (tipo.type == "password"){
+                    tipo.type = "text";
+                }else{
+                    tipo.type = "password";
+                }
+            }
+        </script>
+
 
     </body>
 </html>
@@ -59,7 +88,7 @@ if(isset($_POST['nome']))
 		if($senha == $confSenha)
 		{
 			require_once 'CLASSES/usuarios.php';
-			$us = new Usuario("projeto_comentario","localhost","root","");
+			$us = new Usuario("projeto_comentarios","localhost","root","");
 			if($us->cadastrar($nome, $email,$telefone, $senha))
 			{ ?>
 				<p class="mensagem1">Cadastrado com sucesso!<a href="entrar.php">Acesse já!</a></p> 

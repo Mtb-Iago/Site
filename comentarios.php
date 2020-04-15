@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'CLASSES/comentarioBd.php';
-$c = new comentario("projeto_comentario","localhost","root","");
+$c = new comentario("projeto_comentarios","localhost","root","");
 $coments = $c->buscarComentario();
 
 ?>
@@ -13,6 +13,8 @@ $coments = $c->buscarComentario();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/comentarios.css" rel="stylesheet">
+        <link rel="icon" type="imagem/png" href="img/icon.png" />
+
     </head>
     <body>
     <nav>
@@ -74,7 +76,8 @@ $coments = $c->buscarComentario();
             if($coments > 0)
             {   
                 foreach ($coments as $v ) {//pega tudo da posicao do array e coloca e executa na variavel v 
-                ?>
+                   
+               ?>
                     <div id="area-comentario">
                     <img src="img\perfil.png">
                     <h3> <?php echo $v['nome_pessoa']; ?> </h3>
@@ -88,7 +91,9 @@ $coments = $c->buscarComentario();
                              //verificando se o comentario realmente e dele
                             if(($_SESSION['id_usuario']) == $v['fk_id_usuario'])//testa para ve se o que esta logado é o adm ou usuario comun
                             //para imprimir somente a sessao que de uma unica verificação.
-                            { ?>
+                            { 
+                                
+                                ?>
                                 <a href="comentarios.php?id_exc=<?php  echo $v['id']; ?>">Excluir</a> </h4>
                  <?php      }   
                            } elseif (isset($_SESSION['id_master']))//verificando se é o adm
@@ -100,48 +105,39 @@ $coments = $c->buscarComentario();
                          ?>
                          
                     <p> <?php echo $v['comentario']; ?> </p>
+                           </div>
                <?php }
             }
             else
             {
-
+                
             }
        /* echo "<pre>";
         var_dump($coments);//vizualizar  o conteudo da varivel ordenada
         echo "</pre>"; */
         ?>
-       
-                   
+                 
         </section>
-        <section id="conteudo3">
-            <div>
-                <h5>Saiba mais sobre como fazer</h5>
-                <p>Analisar seu layout. O ponto de usar o Lorem Ipsum é que ele tem uma distribuição de letras mais ou menos normal, em vez de usar 'Conteúdo aqui, conteúdo aqui'.</p>
-                
-            </div>
-            
-        </section>
-        
-        </div>  
-    </body>
-</html>
-<!-------------------pegar id da exlclusao--------------------->
+        <!-------------------pegar id da exlclusao--------------------->
 <?php
     if(isset($_GET['id_exc']))
+
     {
+        header("location:comentarios.php");
         $id_e = addslashes($_GET['id_exc']);
        
         if(isset($_SESSION['id_master']))
         {
             $c->excluirComentario($id_e, $_SESSION['id_master']);
+            
         }
         
         elseif (isset($_SESSION['id_usuario']))
         {
             $c->excluirComentario($id_e, $_SESSION['id_usuario']);
         }
-        header("location: comentarios.php");
-    
+        
+        
 
     }
 
@@ -166,3 +162,15 @@ $coments = $c->buscarComentario();
     }
 
 ?>
+        <section id="conteudo3">
+            <div>
+                <h5>Saiba mais sobre como fazer</h5>
+                <p>Analisar seu layout. O ponto de usar o Lorem Ipsum é que ele tem uma distribuição de letras mais ou menos normal, em vez de usar 'Conteúdo aqui, conteúdo aqui'.</p>
+                
+            </div>
+            
+        </section>
+        
+          
+    </body>
+</html>

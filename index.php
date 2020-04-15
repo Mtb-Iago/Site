@@ -4,7 +4,7 @@
         
         if (isset($_SESSION['id_usuario']))
         {
-            $us = new Usuario("projeto_comentario","localhost","root","");
+            $us = new Usuario("projeto_comentarios","localhost","root","");
             $informacao = $us->buscarDados($_SESSION['id_usuario']);
             
         }  
@@ -12,7 +12,7 @@
         
         if (isset($_SESSION['id_master']))
         {
-            $us = new Usuario("projeto_comentario","localhost","root","");
+            $us = new Usuario("projeto_comentarios","localhost","root","");
             $informacao = $us->buscarDados($_SESSION['id_master']);
         }
        
@@ -30,6 +30,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <script src="calculo.js"></script>
         <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="imagem/png" href="img/icon.png" />
     </head>
 
     <body>

@@ -19,7 +19,7 @@ date_default_timezone_set('america/Sao_Paulo');
     {
         $cmd = $this->pdo->prepare("SELECT *,
         (SELECT nome FROM usuarios WHERE id = fk_id_usuario )
-          as nome_pessoa FROM comentarios ORDER BY dia DESC ");
+          as nome_pessoa FROM comentarios ORDER BY id DESC ");
           $cmd->execute();
           $dados = $cmd->fetchAll(PDO::FETCH_ASSOC);
           return $dados;

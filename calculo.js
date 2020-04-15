@@ -3,6 +3,7 @@ function clicar() { //função que envia o calculo do js para o html
     var nota2 = document.querySelector(".nota2").value;
     var nota3 = document.querySelector(".nota3").value;
 
+
     var resultado = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
     //variavel resultado recebe o calculo das variaveis que receberam os valores input
     document.querySelector(".resultado").innerHTML = `Sua média..: ${resultado.toFixed(1)}`;

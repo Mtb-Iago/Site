@@ -88,6 +88,7 @@ input {
     outline: none;
 }
 
+
 h1 {
     clear: both;
     margin: auto;
@@ -102,8 +103,34 @@ h1 {
     margin-bottom: 30px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
 }
+button{
+    clear: both;
+    background-color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin-left: 4px;
+    background-image: url("../img/mostrar.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    margin-top: 2px;
+
+}
+button:hover{
+    text-decoration: none;
+    background-color: rgba(245, 245, 245, 0.9);
+    
+    
+}
+button:focus{
+    outline-style: none;}
+
 
 input[type=submit] {
+    clear: both;
+    flex-direction: row;
     width: 100px;
     border-radius: 8px;
     height: 40px;
@@ -121,10 +148,18 @@ input[type=submit]:hover {
     background-color: yellowgreen;
 }
 
+
 label {
-    display: block;
+    display: flex;
+    text-align: left;
     width: 100%;
 }
+div.formsenha{
+    width: 256px;
+    flex-direction: row;
+}
+
+
 
 
 /*----------------------mensagem aviso----------------*/

@@ -150,13 +150,16 @@ input[type=submit]:hover {
     clear: both;
     /*limpa floats terceiros*/
     padding: 10px;
+    align-items: left;
+    
 }
 
 #area-comentario img {
-    width: 60px;
+    width: 50px;
     float: left;
     padding-right: 10px;
-    clear: both;
+   
+    
 }
 
 #area-comentario h3 {
@@ -164,6 +167,7 @@ input[type=submit]:hover {
     color: rgb(0, 0, 193);
     font-size: 12pt;
     padding: 5px 10px 5px 0px;
+    
 }
 
 #area-comentario h4 {
@@ -171,14 +175,19 @@ input[type=submit]:hover {
     color: rgba(0, 0, 0, 0.6);
     line-height: 30px;
     /*altura da linha*/
+    height: initial;
+    
 }
 
 #area-comentario h4 a {
     color: black;
+    
 }
 
 #area-comentario p {
     line-height: 25px;
+    
+    
 }
 
 

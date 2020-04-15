@@ -4,7 +4,7 @@ if(!isset($_SESSION['id_master'])){
     header("location: index.php");
 }
 require_once 'CLASSES/usuarios.php';
-$us = new Usuario("projeto_comentario","localhost","root","");
+$us = new Usuario("projeto_comentarios","localhost","root","");
 $dados = $us->buscarTodosUsuarios();
 
 ?>
@@ -15,6 +15,8 @@ $dados = $us->buscarTodosUsuarios();
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/dados.css" rel="stylesheet">
+        <link rel="icon" type="imagem/png" href="img/icon.png" />
+
     </head>
     <body>
         

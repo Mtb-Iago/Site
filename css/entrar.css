@@ -46,7 +46,7 @@ li a:hover {
 body {
     padding-top: 100px;
     font-family: Arial;
-    background-image: url("../img/fundoentrar.jpg");
+   background-image: url("../img/fundoentrar.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     /*fixa no meio a img*/
@@ -105,6 +105,36 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
+}
+div#senhaform{
+    background-color: black;
+    width: 256px;
+    flex-direction: initial;
+}
+button{
+    background-color: #fff;
+    border-radius: 8px;
+    border: none;
+    margin-left: 4px;
+    background-image: url("../img/mostrar.png");
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+}
+button:hover{
+    text-decoration: none;
+    text-indent:-9999px;
+    color: black;
+    background-color: rgba(245, 245, 245, 0.9);
+    
+    
+}
+button:focus{
+    outline-style: none;
 }
 
 input[type=submit] {
